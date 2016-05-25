@@ -22,7 +22,63 @@ var Roots = {
   // All pages
   common: {
     init: function() {
-      // JavaScript to be fired on all pages
+    
+          
+      $('.navbar-collapse').waypoint('sticky');
+      
+      var headerwidth = $('.wrap.container').outerWidth();
+      $('.navbar-collapse').css('width', headerwidth);
+      
+      $(window).resize(function() {
+      	var headerwidth = $('.wrap.container').outerWidth();
+      	$('.navbar-collapse.stuck').css('width', headerwidth);
+      }).resize();
+      
+
+//      $(window).load(function(){
+//        $("#devmap .content .holder[data-orientation!='vertical']").twentytwenty({default_offset_pct: 0.7});
+//      });
+
+      $('#slider').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        pauseOnHover: true,
+        speed: 1000,
+      });
+
+      $('#impact-slider').slick({
+        centerMode: true,
+        slidesToShow: 3,
+        autoplay: true,
+        autoplaySpeed: 8000,
+        pauseOnHover: true,
+        speed: 1000,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: '40px',
+              slidesToShow: 4
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: '40px',
+              slidesToShow: 1
+            }
+          }
+        ]
+      });
+
     }
   },
   // Home page

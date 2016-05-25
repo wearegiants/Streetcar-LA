@@ -1,1 +1,129 @@
-.banner { }
+.banner { 
+
+	margin-bottom: 0;
+	background: none;
+	border-bottom: none;
+	font-family: @brandon;
+
+	a {
+		color: @brand-primary
+	}
+
+	.navbar-collapse {
+		border-top: 1px solid lighten(@brand-primary, 50%);
+		border-bottom: 1px solid lighten(@brand-primary, 50%);
+	}
+
+	.navbar-nav {
+		float: none;
+		display: inline-block;
+	}
+
+	.navbar-nav > li {
+		text-transform: uppercase;
+		display: inline-block;
+		float: none;
+		font-size: 18px;
+		letter-spacing: 2px;
+		font-weight: 700;
+
+		&.active > a {
+			background: none;
+			color: darken(@brand-primary, 00%)
+		}
+
+		&.active > a:hover {
+			background: none;
+			color: darken(@brand-primary, 00%);
+		}
+
+		&.open.active > a:hover {
+			background: none;
+			color: darken(@brand-secondary, 30%);
+		}
+
+		&.active ul a {
+			background: none;
+			color: darken(@brand-secondary, 30%);
+		}
+
+		&.active ul a:hover {
+			background: darken(@brand-secondary, 5%)!important;
+		}
+
+		&.active:hover ul a {
+			background: none;
+			color: darken(@brand-secondary, 30%);
+		}
+
+	}
+
+	.navbar-nav > li > a {
+		padding-top: 30px;
+		padding-bottom: 30px;
+		color: @brand-primary;
+		transition: color 300ms ease;
+
+		&:hover {
+			color: darken(@brand-primary, 10%)
+		}
+
+	}
+
+	.dropdown.open {
+		a.dropdown-toggle {
+			color: darken(@brand-secondary, 30%);
+			background: darken(@brand-secondary, 5%)!important;
+		}
+		a:hover {
+			color: darken(@brand-secondary, 30%);
+		}
+	}
+
+	.open.dropdown-menu {
+		li a, li a.active {
+			color: darken(@brand-secondary, 30%);
+		}
+	}
+
+	.dropdown-menu {
+		margin-top: -2px;
+		background: @brand-secondary;
+		border: none;
+
+		a {
+			color: darken(@brand-secondary, 30%);
+			font-weight: 900;
+			letter-spacing: 1px;
+		}
+
+		a:hover {
+			background: darken(@brand-secondary, 5%);
+			color: darken(@brand-secondary, 40%);
+		}
+
+	}
+
+	#menu-primary-navigation {
+		border-right: 1px solid lighten(@brand-primary, 50%);
+	}
+
+	#logo {
+		padding-top: 35px;
+		padding-bottom: 35px;
+	}
+
+}
+
+.page-home .navbar-collapse {
+	border-bottom: none;
+}
+
+#menu-social-menu {
+	padding: 0 8px;
+}
+
+#menu-social-menu li a {
+	padding-left: 3px;
+	padding-right: 3px;
+}

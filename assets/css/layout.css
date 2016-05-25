@@ -1,0 +1,55 @@
+/* @override 
+	http://streetcar.dev/assets/css/layout.css */
+
+.wrap > .content {
+  overflow: hidden;
+}
+
+#impact-slider {
+  overflow: visible;
+}
+
+#impact-slider .slick-list {
+  overflow: visible;
+}
+
+#impact-slider .image {
+  position: relative;
+}
+
+.popup {
+  text-align: center;
+  background: rgba(0,0,0,.9);
+  color: #fff;
+  border-radius: 5px;
+  padding: 15px;
+  position: absolute;
+  left: 20px;
+  right: 10px;
+  z-index: 11;
+  bottom: 100%;
+  margin-bottom: -30px;
+  transition: 300ms;
+  font-family: 'brandon grotesque';
+  font-weight: 500;
+  opacity: 0;
+}
+
+#impact-slider .image:hover .popup {
+  opacity: 1;
+  margin-bottom: -20px;
+}
+
+.popup:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 100%;
+	width: 0; 
+	height: 0; 
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-top: 8px solid rgba(0,0,0,.9);
+	left: 50%;
+	margin-left: -8px;
+}
