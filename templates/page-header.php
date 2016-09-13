@@ -8,6 +8,8 @@
   } else {
    echo $post->post_title;
   }
+ } elseif (is_home()) {
+  echo 'Blog';
  } else {
   echo "Error";
 }
