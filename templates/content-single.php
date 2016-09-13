@@ -5,6 +5,9 @@
       <?php # get_template_part('templates/entry-meta'); ?>
     </header>
     <div class="entry-content">
+      <div class="entry-thumbnail">
+        <?php the_post_thumbnail('large', array('class' => 'img-responsive')); ?>
+      </div>
       <?php the_content(); ?>
     </div>
     <footer>
@@ -13,3 +16,13 @@
     <?php #comments_template('/templates/comments.php'); ?>
   </article>
 <?php endwhile; ?>
+
+<style>
+  .entry-thumbnail {
+    margin-bottom: 20px;
+  }
+  .entry-thumbnail img {
+    display: block;
+    max-width: 100%
+  }
+</style>
