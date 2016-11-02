@@ -7,6 +7,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <?php wp_head(); ?>
-<link rel="stylesheet" type="text/css" href="/assets/css/layout.css">
+<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/assets/css/layout.css">
 
 </head>
