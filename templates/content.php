@@ -8,6 +8,7 @@
       <?php the_post_thumbnail('large', array('class' => 'img-responsive')); ?>
     </div>
     <?php the_excerpt(); ?>
+    <div style="text-align:center"><br><a class="btn green-button" href="<?php the_permalink(); ?>">Read More</a></div>
   </div>
 </article>
 
@@ -18,5 +19,12 @@
   .entry-thumbnail img {
     display: block;
     max-width: 100%
+  }
+  .green-button {
+    color: white;
+    background: #29AA50;
+  }
+  .green-button:hover {
+    color: white;
   }
 </style>
